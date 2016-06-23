@@ -1,0 +1,5 @@
+﻿  Composant1Test.cpp
+c:\users\melkus\documents\github\blockchain\composant1test\composant1test.cpp(22): warning C4101: 'assert' : variable locale non référencée
+c:\users\melkus\documents\github\blockchain\composant1test\composant1test.cpp(29): warning C4101: 'assert' : variable locale non référencée
+c:\users\melkus\documents\github\blockchain\composant1test\composant1test.cpp(39): warning C4101: 'assert' : variable locale non référencée
+  Composant1Test.vcxproj -> C:\Users\Melkus\Documents\GitHub\Blockchain\Debug\Composant1Test.dll
