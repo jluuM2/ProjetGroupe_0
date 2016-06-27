@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Blockchain", "Blockchain\Blockchain.vcxproj", "{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939} = {1DACF40E-7B16-4523-93FD-8FAE036EB939}
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE} = {58A6205C-1194-4B47-A22A-E0F4624B4DDE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Composant1", "Composant1\Composant1.vcxproj", "{58A6205C-1194-4B47-A22A-E0F4624B4DDE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939} = {1DACF40E-7B16-4523-93FD-8FAE036EB939}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Composant5", "Composant5\Composant5.vcxproj", "{1DACF40E-7B16-4523-93FD-8FAE036EB939}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Composant1Test", "Composant1Test\Composant1Test.vcxproj", "{522BB360-75E8-4081-B2A3-A4A8D042AEF2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE} = {58A6205C-1194-4B47-A22A-E0F4624B4DDE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}.Debug|x64.ActiveCfg = Debug|x64
+		{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}.Debug|x64.Build.0 = Debug|x64
+		{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}.Debug|x86.ActiveCfg = Debug|Win32
+		{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}.Debug|x86.Build.0 = Debug|Win32
+		{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}.Release|x64.ActiveCfg = Release|x64
+		{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}.Release|x64.Build.0 = Release|x64
+		{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}.Release|x86.ActiveCfg = Release|Win32
+		{F1AA47C9-49E6-4CE9-A624-4BA8BD9A084C}.Release|x86.Build.0 = Release|Win32
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE}.Debug|x64.ActiveCfg = Debug|x64
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE}.Debug|x64.Build.0 = Debug|x64
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE}.Debug|x86.ActiveCfg = Debug|Win32
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE}.Debug|x86.Build.0 = Debug|Win32
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE}.Release|x64.ActiveCfg = Release|x64
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE}.Release|x64.Build.0 = Release|x64
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE}.Release|x86.ActiveCfg = Release|Win32
+		{58A6205C-1194-4B47-A22A-E0F4624B4DDE}.Release|x86.Build.0 = Release|Win32
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939}.Debug|x64.ActiveCfg = Debug|x64
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939}.Debug|x64.Build.0 = Debug|x64
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939}.Debug|x86.ActiveCfg = Debug|Win32
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939}.Debug|x86.Build.0 = Debug|Win32
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939}.Release|x64.ActiveCfg = Release|x64
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939}.Release|x64.Build.0 = Release|x64
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939}.Release|x86.ActiveCfg = Release|Win32
+		{1DACF40E-7B16-4523-93FD-8FAE036EB939}.Release|x86.Build.0 = Release|Win32
+		{522BB360-75E8-4081-B2A3-A4A8D042AEF2}.Debug|x64.ActiveCfg = Debug|x64
+		{522BB360-75E8-4081-B2A3-A4A8D042AEF2}.Debug|x64.Build.0 = Debug|x64
+		{522BB360-75E8-4081-B2A3-A4A8D042AEF2}.Debug|x86.ActiveCfg = Debug|Win32
+		{522BB360-75E8-4081-B2A3-A4A8D042AEF2}.Debug|x86.Build.0 = Debug|Win32
+		{522BB360-75E8-4081-B2A3-A4A8D042AEF2}.Release|x64.ActiveCfg = Release|x64
+		{522BB360-75E8-4081-B2A3-A4A8D042AEF2}.Release|x64.Build.0 = Release|x64
+		{522BB360-75E8-4081-B2A3-A4A8D042AEF2}.Release|x86.ActiveCfg = Release|Win32
+		{522BB360-75E8-4081-B2A3-A4A8D042AEF2}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
