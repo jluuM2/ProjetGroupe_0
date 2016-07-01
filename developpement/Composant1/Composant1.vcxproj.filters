@@ -18,6 +18,9 @@
     <ClInclude Include="..\interfaces\Composant1.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="..\interfaces\Bloc.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Composant1.cpp">

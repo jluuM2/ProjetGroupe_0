@@ -148,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\interfaces\Bloc.h" />
     <ClInclude Include="..\interfaces\Composant1.h" />
   </ItemGroup>
   <ItemGroup>

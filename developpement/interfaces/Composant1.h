@@ -28,7 +28,6 @@ namespace cp1 {
 		string blocToString(Bloc bloc);
 		Bloc stringToBloc(string chaine);
 		void split(const string & s, const char * delim, vector<string>& v);
-		
 
 	public:
 		// interface du composant1
