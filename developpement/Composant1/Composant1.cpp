@@ -3,31 +3,51 @@
 
 #include "Composant1.h"
 #include <string>
-#include <stdio.h>
+#include <cstdio>
 #include <fcntl.h>
 #include <stdlib.h>
 #include <process.h>
 #include <fstream>
 #include <iostream>
+#include <iomanip>
 
 namespace cp1 {
 
 	Composant1::Composant1() {}
 
 	string charToString(char tab[], unsigned int size) {
-		string str = "";
-		for (unsigned int i = 0; i<size; i++) {
-			str += tab[i];
-		}
-		return str;
+		std::stringstream ss;
+		ss << std::hex;
+		for (int i = 0; i<size; ++i)
+			ss << std::setw(2) << std::setfill('0') << (int)tab[i];
+		return ss.str();
 	}
 	string charToString(unsigned char* tab, unsigned int size) {
-		string str = "";
+		std::stringstream ss;
+		ss << std::hex;
+		for (int i = 0; i<size; ++i)
+			ss << std::setw(2) << std::setfill('0') << (int)tab[i];
+		return ss.str();
+	}
 
-		for (unsigned int i = 0; i<size; i++) {
-			str += tab[i];
+	void StringToChar(char* dest, string source, int size) {
+		std::stringstream ss;
+		ss << std::hex << source;
+
+		string s = ss.str();
+		for (int i = 0; i < size; i++) {
+			dest[i] = s[i];
 		}
-		return str;
+	}
+
+	void StringToChar(unsigned char* dest, string source, int size) {
+		std::stringstream ss;
+		ss << std::hex << source;
+
+		string s = ss.str();
+		for (int i = 0; i < size; i++) {
+			dest[i] = s[i];
+		}
 	}
 
 	bool Composant1::openFile(string path, string fileName) {
@@ -37,23 +57,13 @@ namespace cp1 {
 		string all = "";
 		char line[2048];
 		if (fichier) {
-			while (fgets(line, 2048, fichier)) {
+			while (fgets(line, 2048, fichier))
 				all += line;
-			}
+			
 			vector<string> blocsString;
 			split(all, this->delimiter.c_str(), blocsString);
-			for (unsigned int i = 0; i< blocsString.size(); i++) {
+			for (unsigned int i = 0; i< blocsString.size(); i++)
 				this->blocs.push_back(stringToBloc(blocsString[i]));
-				cout << i << endl;
-				cout << "REAL hash : " << charToString(blocs[i].hash, 64) << endl;
-				cout << "REAL previous_hash : " << charToString(blocs[i].previous_hash, 64) << endl;
-				//cout << i << endl;
-				//cout << blocsString[i] << endl;
-
-				//Bloc b = stringToBloc(blocsString[i]);
-				//cout << "REAL hash : " << b.hash << endl;
-				//cout << "REAL previous_hash : " << b.previous_hash << endl;
-			}
 
 			return true;
 		}
@@ -123,20 +133,6 @@ namespace cp1 {
 			"}";
 	}
 
-	void StringToChar(char* dest, string source, int size) {
-		for (int i = 0; i < size; i++) {
-			dest[i] = source[i];
-		}
-		//dest[size] = '\0';
-	}
-
-	void StringToChar(unsigned char* dest, string source, int size) {
-		for (int i = 0; i < size; i++) {
-			dest[i] = source[i];
-		}
-		//dest[size] = '\0';
-	}
-
 	Bloc Composant1::stringToBloc(string stringBloc) {
 		int nbTXi = 4;
 		int nbUTXo = 2;
@@ -166,7 +162,6 @@ namespace cp1 {
 		}
 
 		// ** TXM **
-		//cout << mapBloc["tx0.utxo[0].montant"] << endl;
 		bloc.tx0.utxo[0].montant = stof(mapBloc["tx0.utxo[0].montant"]);
 		StringToChar(bloc.tx0.utxo[0].dest, mapBloc["tx0.utxo[0].dest"], 4);
 		StringToChar(bloc.tx0.utxo[0].hash, mapBloc["tx0.utxo[0].hash"], 64);

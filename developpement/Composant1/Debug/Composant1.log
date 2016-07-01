@@ -1,3 +1,5 @@
 ﻿  Composant1.cpp
+c:\users\melkus\documents\github\blockchain\composant1\composant1.cpp(28): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\melkus\documents\github\blockchain\composant1\composant1.cpp(50): warning C4018: '<' : incompatibilité signed/unsigned
      Création de la bibliothèque C:\Users\Melkus\Documents\GitHub\Blockchain\Debug\Composant1.lib et de l'objet C:\Users\Melkus\Documents\GitHub\Blockchain\Debug\Composant1.exp
   Composant1.vcxproj -> C:\Users\Melkus\Documents\GitHub\Blockchain\Debug\Composant1.dll
